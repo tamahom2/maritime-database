@@ -1,0 +1,2 @@
+--Les ports de categories>2 n'ayant pas la meme localisation que les port de Germany
+SELECT * FROM port WHERE localisation NOT IN ( SELECT localisation FROM port NATURAL JOIN nation nat WHERE nat.nom_nation='Serbia')
